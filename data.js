@@ -1,7 +1,6 @@
 export const contactOptions = [
     {
         name: 'Silver Gray',
-        value: 'silver-gray',
         link: '',
         image: './images/.png',
         vibe: ['natural'],
@@ -11,7 +10,6 @@ export const contactOptions = [
     },
     {
         name: 'Glowy Natural',
-        value: 'glowy-natural',
         link: '',
         image: './images/.png',
         vibe: ['natural'],
@@ -21,7 +19,6 @@ export const contactOptions = [
     },
     {
         name: 'Glowy Black',
-        value: 'glowy-black',
         link: '',
         image: './images/.png',
         vibe: ['natural', 'bold'],
@@ -31,7 +28,6 @@ export const contactOptions = [
     },
     {
         name: 'Sweet Blush',
-        value: 'sweet-blush',
         link: '',
         image: './images/.png',
         vibe: ['bold'],
@@ -41,7 +37,6 @@ export const contactOptions = [
     },
     {
         name: 'Rum Crunch',
-        value: '',
         link: '',
         image: './images/.png',
         vibe: ['soft', 'natural'],
@@ -51,7 +46,6 @@ export const contactOptions = [
     },
     {
         name: 'Light Brown',
-        value: '',
         link: '',
         image: './images/.png',
         vibe: ['soft', 'natural'],
@@ -61,7 +55,6 @@ export const contactOptions = [
     },
     {
         name: 'Warm Pearl',
-        value: '',
         link: '',
         image: './images/.png',
         vibe: ['soft', 'natural'],
@@ -71,7 +64,6 @@ export const contactOptions = [
     },
     {
         name: 'Field Blue',
-        value: '',
         link: '',
         image: './images/.png',
         vibe: ['bold'],
@@ -81,7 +73,6 @@ export const contactOptions = [
     },
     {
         name: 'Blue Purple',
-        value: '',
         link: '',
         image: './images/.png',
         vibe: ['bold'],
@@ -91,7 +82,6 @@ export const contactOptions = [
     },
     {
         name: 'Gray Blue',
-        value: '',
         link: '',
         image: './images/.png',
         vibe: ['bold'],
@@ -101,7 +91,6 @@ export const contactOptions = [
     },
     {
         name: 'Sunset Pink',
-        value: '',
         link: '',
         image: './images/.png',
         vibe: ['soft', 'bold'],
@@ -111,7 +100,6 @@ export const contactOptions = [
     },
     {
         name: 'Berry Pink',
-        value: '',
         link: '',
         image: './images/.png',
         vibe: ['soft'],
@@ -121,7 +109,6 @@ export const contactOptions = [
     },
     {
         name: 'Golden Olive',
-        value: '',
         link: '',
         image: './images/.png',
         vibe: ['natural', 'soft'],
@@ -131,7 +118,6 @@ export const contactOptions = [
     },
     {
         name: 'Sweet Milk Tea',
-        value: '',
         link: '',
         image: './images/.png',
         vibe: ['natural', 'soft'],
@@ -141,7 +127,6 @@ export const contactOptions = [
     },
     {
         name: 'Vivi Pink',
-        value: '',
         link: '',
         image: './images/.png',
         vibe: ['soft', 'natural'],

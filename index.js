@@ -2,9 +2,14 @@ import { contactOptions } from "./data.js";
 
 const vibeEl = document.getElementById('vibe')
 const outfitEl = document.getElementById('outfit')
+const formEl = document.getElementById('form')
 
 vibeEl.addEventListener('change', highlightOption)
 outfitEl.addEventListener('change', highlightOption)
+formEl.addEventListener('submit', function(e) {
+    e.preventDefault()
+    renderContacts()
+})
 
 
 renderOptions(contactOptions)
@@ -71,4 +76,61 @@ function getOutfitOptions(contacts) {
     }
     return outfitOptions
 }
+
+function renderContacts() {
+    console.log(getSortedMatchingContacts())
+}
+
+
+function getSortedMatchingContacts() {
+    const checkedVibes = [...document.querySelectorAll('#vibe input[type="checkbox"]:checked')].map(checkbox => checkbox.value)
+    const checkedOutfits = [...document.querySelectorAll('#outfit input[type="checkbox"]:checked')].map(checkbox => checkbox.value)
+    const isPrescripted = document.getElementById('is-prescripted').checked
+    const matchingContactsArr = contactOptions.filter(function(contact) {
+
+            // if prescripted checkbox is checked, filter out all unprescripted contacts
+            if (isPrescripted && !contact.isPrescripted) {
+                return false
+
+            // if at least one vibe and one outfit option are checked, filter out all contacts that don't have at least one checked vibe and one checked outfit
+            } else if (document.querySelector('#vibe input[type="checkbox"]:checked') && document.querySelector('#outfit input[type="checkbox"]:checked')) {
+                const vibeMatch = checkedVibes.some(function(v) {
+                    return contact.vibe.includes(v)
+                })
+                const outfitMatch = checkedOutfits.some(function(o) {
+                    return contact.outfit.includes(o)
+                })
+                return vibeMatch && outfitMatch
+
+            // if only vibe option or only outfit option are checked, add contacts that have those options
+            } else {
+                return score(contact) > 0
+            }
+        })
+    
+    // .sort(a, b) passes through first and second item of arr and compares them
+    // need custom function (e.g., score(b) - score(a)) bc default behavior of .sort() is weird for numbers
+    // results:
+        // negative -> a comes first
+        // positive -> b comes first
+        // zero -> same order
+
+    return matchingContactsArr.sort(function(a, b) {
+        return score(b) - score(a)
+    })
+}
+
+function score(contact) {
+    const checkedVibes = [...document.querySelectorAll('#vibe input[type="checkbox"]:checked')].map(checkbox => checkbox.value)
+    const checkedOutfits = [...document.querySelectorAll('#outfit input[type="checkbox"]:checked')].map(checkbox => checkbox.value)
+    const checkedVibesArr = checkedVibes.filter(function(v) {
+        return contact.vibe.includes(v)
+    })
+    const checkedOutfitsArr = checkedOutfits.filter(function(o) {
+        return contact.outfit.includes(o)
+    })
+    const score = checkedVibesArr.length + checkedOutfitsArr.length
+    return score
+}
+
 
