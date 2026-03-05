@@ -18,11 +18,21 @@ h1 {
     font-family: "Gamja Flower", sans-serif;
     font-size: 5rem;
     font-weight: bold;
+    text-align: center;
+    margin: 25px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 p, label {
     font-size: 1.5rem;
 }
+
+
+/* interactive */
 
 button {
     background: #c59896;
@@ -44,6 +54,54 @@ button:active {
     color: #c59896;
 }
 
-input[type="checkbox"] {
+button, input[type='checkbox'] {
+    cursor: pointer;
+}
+
+.is-prescripted {
     accent-color: #fefff7;
+}
+
+.highlight {
+    font-weight: bold;
+    background: #fde5df;
+    accent-color: #fde5df;
+}
+
+
+/* form */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-inner {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.form-options {
+    background: #fefff7;
+    min-width: 250px;
+    min-height: 300px;
+    padding: 25px;
+    border: 5px solid #c59896;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin: 5px 0;
+}
+
+.prescripted-checkbox {
+    margin-bottom: 25px;
 }
