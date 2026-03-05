@@ -34,7 +34,7 @@ p, label {
 
 /* interactive */
 
-button {
+.find-btn {
     background: #c59896;
     color: #fefff7;
     font-size: 1.5rem;
@@ -45,11 +45,11 @@ button {
     border-radius: 8px;
 }
 
-button:hover, button:focus {
+.find-btn:hover, .find-btn:focus {
     opacity: .65;
 }
 
-button:active {
+.find-btn:active {
     background: #fefff7;
     color: #c59896;
 }
@@ -88,10 +88,13 @@ form {
     min-width: 250px;
     min-height: 300px;
     padding: 25px;
-    border: 4px solid #c59896;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
+}
+
+.form-options, .modal {
+    border: 4px solid #c59896;
+    border-radius: 20px;
 }
 
 .checkbox {
@@ -104,4 +107,94 @@ form {
 
 .prescripted-checkbox {
     margin-bottom: 25px;
+}
+
+
+/* modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    padding: 0 15px;
+    margin: auto;
+    top: 150px;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 500px;
+    background: #fefff7;
+}
+
+.close-modal-wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+.close-modal-btn, .arrow-btn {
+    font-size: 3rem;
+    font-family: "Gaegu", sans-serif;
+    padding: 0;
+    margin: 0;
+    background: 0;
+    border: 0;
+    color: #c59896;
+}
+
+.arrow-btn:disabled {
+    cursor: not-allowed;
+    color: gray;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 360px;
+}
+
+.modal-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-name {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+}
+
+.contact-details {
+    width: 100%;
+}
+
+.contact-item, .no-results {
+    font-size: 2rem;
+}
+
+.contact-item {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.contact-item span {
+    text-decoration: underline;
+}
+
+.no-results {
+    text-align: center;
+}
+
+/* utility */
+
+.border {
+    border: 1px dotted red;
 }

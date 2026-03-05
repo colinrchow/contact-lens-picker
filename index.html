@@ -31,9 +31,26 @@
                         id="is-prescripted"
                         value="is-prescripted">
                 </div>
-                <button type="submit" id="find-btn">Find Contacts!</button>
+                <button type="submit" class="find-btn" id="find-btn">Find Contacts!</button>
             </form>
+            <div class="modal" id="modal">
+                <div class="close-modal-wrapper">
+                    <button class="close-modal-btn" id="close-modal-btn">x</button>
+                </div>
+                <div class="gallery" id="gallery">
+                    <button class="arrow-btn" id="left-arrow-btn" disabled><i class="fa-solid fa-caret-left"></i></button>
+                    <div class="modal-inner">
+                        <h2 class="contact-name" id="contact-name"></h2>
+                        <div class="contact">
+                            <!-- <div id="contact-img"><img src="./images"></div> -->
+                            <div class="contact-details" id="contact-details"></div>
+                        </div>
+                    </div>
+                    <button class="arrow-btn" id="right-arrow-btn"><i class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
         </main>
         <script type="module" src="index.js"></script>
+        <script src="https://kit.fontawesome.com/7864393221.js" crossorigin="anonymous"></script>
     </body>
 </html>
