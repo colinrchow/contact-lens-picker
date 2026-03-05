@@ -1,0 +1,49 @@
+/* background: #fde5df
+element background: #fefff7
+text: #c59896 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fde5df;
+    color: #c59896;
+    font-family: "Gaegu", sans-serif;
+}
+
+h1 {
+    font-family: "Gamja Flower", sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+p, label {
+    font-size: 1.5rem;
+}
+
+button {
+    background: #c59896;
+    color: #fefff7;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Gaegu", sans-serif;
+    border: 3px solid #c59896;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+button:hover, button:focus {
+    opacity: .65;
+}
+
+button:active {
+    background: #fefff7;
+    color: #c59896;
+}
+
+input[type="checkbox"] {
+    accent-color: #fefff7;
+}

@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="spreadsheet" href="index.css">
-        <title>Contact Lens Picker</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Gamja+Flower&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <title>Cat's Eyes</title>
     </head>
     <body>
-        <header></header>
-        <main></main>
+        <header>
+            <h1>Cat's Eyes</h1>
+        </header>
+        <main>
+            <form>
+                <div class="form-options">
+                    <div class="vibe" id="vibe"></div>
+                    <div class="outfit" id="outfit"></div>
+                </div>
+                <div>
+                    <label for="is-prescripted">Prescripted?</label>
+                    <input 
+                        type="checkbox"
+                        class="is-prescripted"
+                        id="is-prescripted"
+                        value="is-prescripted">
+                </div>
+                <button type="submit">Find Contacts!</button>
+            </form>
+        </main>
         <script type="module" src="index.js"></script>
     </body>
 </html>
