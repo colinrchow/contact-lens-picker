@@ -128,7 +128,7 @@ function getSortedMatchingContacts() {
     const isPrescripted = document.getElementById('is-prescripted').checked
     const matchingContactsArr = contactOptions.filter(function(contact) {
 
-            // if prescripted checkbox is checked, filter out all unprescripted contacts
+            // if prescripted checkbox is checked, filter out all nonprescripted contacts
             if (isPrescripted && !contact.isPrescripted) {
                 return false
 
